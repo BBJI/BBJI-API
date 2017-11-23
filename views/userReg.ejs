@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="/stylesheets/style.css" />
+		<script type="text/javascript" src="/javascripts/cancel.js" ></script>
+	</head>
+	<body>
+		<div class="regDiv">
+			<h1>注册</h1>
+			<form method="post" action="/userReg">
+				用户名：<input type="text"  name="name" /><br />
+				<%if(isNameExist){%>
+					<span class="juge">用户名已存在</span>
+				<%}%>
+				<br />
+				密码：<input type="password" name="password" /><br />
+				重复密码：<input type="password" name="repassword" /><br />
+				<%if(isPasswordSame){%>
+					<span class="juge">两次密码不相同</span>
+				<%}%>
+				<br />
+				邮箱：<input type="email" name="email" /><br />
+				<input type="submit" value="注册" /><input class="cancel" type="button" value="取消" onclick="cancel()" />
+			</form>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录</title>
+		<link rel="stylesheet" href="/stylesheets/style.css" />
+		<script type="text/javascript" src="/javascripts/cancel.js" ></script>
+	</head>
+	<body>
+		<div class="loginDiv">
+			<h1>登录</h1>
+			<form method="post" action="/userLogin">
+				用户名:<input type="text" placeholder="请输入用户名" name="name" /><br />
+				<%if(juge){%>
+					<span class="juge">密码或账号错误</span>
+				<%}%>
+				<br />
+				密码:<input type="password" placeholder="请输入密码" name="password" /><br />
+				<input type="submit" value="确定" />  <input class="cancel" onclick="cancel()" type="button" value="取消" />
+			</form>
+		</div>
+	</body>
+</html>

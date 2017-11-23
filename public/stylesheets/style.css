@@ -1,0 +1,17 @@
+.loginDiv{
+
+	text-align: center;
+}
+
+.regDiv{
+	text-align: center;
+}
+
+input {
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+.juge {
+	color: red;
+}
